@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript calculator 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container  text-dark">
+         <div class="calculator" id="calculator">
+
+            <div class="history">
+                <button onclick="clearHistory()">
+                  <i class="bi bi-trash"></i> Clear
+                </button>
+                <div class="line close" onclick="closeHistory()">_________</div>
+                <div id="calHis"></div>
+            </div>
+
+            <form action="">
+                <div class="top_cal" style="display: flex; justify-content: space-between; align-items: center;  padding: 15px;">
+                    <h3 style="color: aliceblue; font-size: 30px;" id="calText">Calcuator</h3>
+                    <div>
+                        <div class="modal" id="modal">
+                            <p onclick="lightMode()">Light Mode</p>
+                            <p onclick="darkMode()">Dark Mode</p>
+                        </div>
+                        <i class="bi bi-three-dots-vertical" style="color: rgb(24, 57, 85); font-size: 20px;" onclick="displayModal()" id="calText"></i>
+                    </div>
+                </div>
+                <div class="form-group display">
+                    <div id="evaluate"></div>
+                    <div id="result"></div>
+                </div>
+                <center>
+                    <hr style="width: 60px; margin: 15px; height: 0.5vh; background-color: aliceblue;"  onclick="displayHistory()" >
+                </center>
+              <div class="btn_div">
+                <div class="row">
+                    <input type="button" onclick="returnToZero()"   value="AC">
+                    <button type="button" onclick="del()" id="btn2"><i class="bi bi-backspace"></i></button>
+                    <input type="button" onclick="display('%')" value="%"  >
+                    <input type="button"  class="operator" onclick="display('/')" value="/" id="btn2">
+                </div>
+                <!-- <br> -->
+                <div class="row ">
+                   <input type="button" onclick="display('7')" value="7">
+                   <input type="button" onclick="display('8')" value="8">
+                   <input type="button" onclick="display('9')" value="9">
+                   <input type="button"  class="operator" onclick="display('*')" value="x" id="btn2">
+                </div>
+                <!-- <br> -->
+                <div class="row ">
+                    <input type="button" onclick="display('4')" value="4">
+                   <input type="button" onclick="display('5')" value="5">
+                   <input type="button" onclick="display('6')" value="6">
+                   <input type="button" class="operator" onclick="display('-')" value="-" id="btn2">
+                </div>
+                <!-- <br> -->
+                <div class="row ">
+                    <input type="button" onclick="display('1')" value="1">
+                    <input type="button" onclick="display('2')" value="2">
+                    <input type="button" onclick="display('3')" value="3">
+                    <input type="button" class="operator"onclick="display('+')" value="+" id="btn2">
+                </div>
+                <!-- <br> -->
+                <div class="row ">
+                    <button type="button" id="btn2"><i class="bi bi-recycle"></i></button>
+                    <input type="button" onclick="display('0')" value="0">
+                    <input type="button" onclick="display('.')" value=".">
+                    <input type="button" class="operator" style="background-color: orangered;" id="btn2"  value="=" onclick="resul()">
+                </div>
+              </div>
+            </form>
+        </div>
+        </div>
+    </div>
+
+    <script src="scritp.js"></script>
+</body>
+</html>
